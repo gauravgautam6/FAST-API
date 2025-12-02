@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+
 # Route with query parameters
 @app.get("/blog")
 def blog(limit: int = 10, published: bool = True, sort: Optional[str] = None):
@@ -61,5 +62,5 @@ def create_blog(request: Blog):
         "message": "Blog created successfully",
         "title": request.title,
         "body": request.body,
-        "published_at": request.published_at
+        "published_at": request.published_at,
     }
