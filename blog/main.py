@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 from . import schemas
 
 # Create FastAPI application instance
